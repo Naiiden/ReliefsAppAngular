@@ -1,0 +1,70 @@
+
+/* ------------------------------------ VARIABLES ------------------------------------ */
+/* ENEDIS LOGOTYPE'S COLORS */
+$enedis-logo-blue: #005EB8;
+$enedis-logo-green: #93C90E;
+
+/* ENEDIS SECONDARY COLORS */
+$enedis-sec-turquoise: #00B2A9;
+$enedis-sec-pink: #EF426F;
+$enedis-sec-blue: #00A3E0;
+$enedis-sec-green: #48A23F;
+$enedis-sec-yellow: #EAAA00;
+$enedis-sec-brown: #A39382;
+$enedis-sec-orange: #E63B11;
+$enedis-sec-purple: #994878;
+$enedis-sec-dark-grey: #688197;
+$enedis-sec-light-grey: #98A4AE;
+// $enedis-sec-light-grey-rgba-25: #EEEEEE;
+$enedis-sec-light-grey-rgba-25: rgba(152, 164, 174, 0.25);
+// $enedis-sec-light-grey-rgba-50: #A9A9A9;
+$enedis-sec-light-grey-rgba-50: rgba(152, 164, 174, 0.5);
+$enedis-background-view: #EEEEEE;
+
+/* ENEDIS TEXT COLORS */
+$enedis-text-white: #FFFFFF;
+$enedis-text-black-80: #575757;
+
+/* ------------------------------------ CONTENT GENERALITIES ------------------------------------ */
+html, body {
+    height: 100%;
+    font-family: "Ubuntu Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: $enedis-text-white;
+    background-color: $enedis-logo-blue;
+}
+
+/* Use padding only on xl screens */
+@media screen and (min-width: 1200px) {
+    html, body {
+        padding: 0 1em;
+    }
+}
+
+.container-fluid {
+    padding: 2.5em 4em 3em;
+}
+
+/* ******************************************* TITLES ******************************************* */
+/* Section's name (Ex: "Les thèmes") */
+h1 {
+    font-family: "Ubuntu Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 0 0 1em 0;
+}
+
+/* Subjects (Ex: "Application SI") */
+h2 {
+    font-family: "Ubuntu Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer advice section (Ex: "Storyboard") */
+h3 {
+    font-family: "Ubuntu Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    margin: 0 0 0.6em 0;
+}
