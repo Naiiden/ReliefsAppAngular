@@ -1,0 +1,6 @@
+<form (submit)="validateUrl()">
+  <input type="text" placeholder="Insert youtube URL" required [(ngModel)]="url" name="urlForm" style="width: 30%">
+  <button class="btn btn-success py-1" style="vertical-align: inherit" type="submit"><i class="fa fa-check"></i></button>
+</form>
+
+<div id="errorUrl" *ngIf="this.isButtonVisible" class="btn btn-danger py-1 my-2">This is not a proper youtube URL !</div>

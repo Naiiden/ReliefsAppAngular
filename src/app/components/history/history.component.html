@@ -1,0 +1,13 @@
+
+<section>
+  <div class="row">
+    <div class="col-lg-10">
+        <div *ngFor="let itemHistoryUrl of historyUrl"><span (click)="playVideoFromHistory(itemHistoryUrl.url)">{{itemHistoryUrl.url}}</span>
+          <i class="fa fa-star px-2" style="cursor: pointer;" (click)="addVideoToBookmarks(itemHistoryUrl.url)" aria-hidden="true"></i>
+        </div> 
+    </div>
+    <div class="col-lg-2">
+        <span class="btn btn-info" (click)="ngOnInit()"><i class="fa fa-repeat"></i></span>
+    </div>
+  </div>
+</section>

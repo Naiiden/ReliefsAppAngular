@@ -1,0 +1,17 @@
+<section id="bookmarksSection" *ngIf="this.isButtonVisible">
+  <h1>Bookmarks: </h1>
+  <div class="row">
+    <div class="col-lg-4">
+      <div *ngFor="let item of bookmarksList" (click)="playVideoFromBookmarks(item)">{{item}}</div>
+    </div>
+    <div class="col-lg-2">
+      <div class="btn btn-info" (click)="ngOnInit()"><i class="fa fa-repeat"></i></div>
+      <div class="btn btn-danger" (click)="this.isButtonVisible = false"><i class="fa fa-times"></i></div>
+    </div>
+    <div class="col-lg-2">
+    </div>
+  </div>
+</section>
+
+<span (click)="this.isButtonVisible = true" class="btn btn-dark"
+  style="position: absolute; top:10px; left:20px">Bookmarks: {{counterBookmarks}}</span>
