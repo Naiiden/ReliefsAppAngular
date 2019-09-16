@@ -38,13 +38,13 @@ export class HistoryComponent implements OnInit {
   }
 
   getHistory() {
+    let historyFromCache = JSON.parse(localStorage.getItem("historyList"))
     this.backendService.getHistoryService().subscribe(res => {
       this.historyUrl = JSON.parse(JSON.stringify(res)).slice().reverse()
       localStorage.setItem("historyList", JSON.stringify(this.historyUrl))
     },
-      (error) => {
-        console.log('Error ! : ' + error)
-      }
+      this.historyUrl = historyFromCache
     )
+    console.log(historyFromCache)
   }
 }

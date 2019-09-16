@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BackendService } from 'src/app/services/backend.service';
 import { HistoryComponent } from '../history/history.component';
+import { YoutubeUrlService } from 'src/app/services/youtube-url.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -19,7 +20,8 @@ export class SearchBarComponent implements OnInit {
 
   constructor(
     private backendService: BackendService,
-    private historyComponent: HistoryComponent
+    private historyComponent: HistoryComponent,
+    private youtubeUrlService: YoutubeUrlService
     ) { }
 
   ngOnInit() {
@@ -49,7 +51,9 @@ export class SearchBarComponent implements OnInit {
       },
       (error) => {
         console.log('Error ! : ' + error)
+        this.youtubeUrlService.addYoutubeUrl(JSON.stringify(this.url))
       }
     )
+
   }
 }
