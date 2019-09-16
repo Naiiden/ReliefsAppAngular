@@ -45,6 +45,5 @@ export class HistoryComponent implements OnInit {
     },
       this.historyUrl = historyFromCache
     )
-    console.log(historyFromCache)
   }
 }
